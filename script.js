@@ -1,27 +1,27 @@
-function carregar() {
-    var msg = document.querySelector('div#msg');
-    var img = document.querySelector('img#imagem');
+function carry() {
+    let now = new Date()
+    let hour = now.getHours()
+    let min = now.getMinutes()
 
-    var data = new Date();
-    var hora = data.getHours();
-    var min = data.getMinutes();
+    let res = document.querySelector('div#res')
+    let img = document.querySelector('img#imagem')
+    let body = document.body
 
-    msg.innerHTML = `<p> Agora são exatamente <strong>${hora}:${min}</strong> horas</p>`
+    res.innerHTML = `<p> Now are precisely <strong>${hour}:${min}</strong> hours. </p>`
 
-    if (hora >= 0 && hora < 12) {
-        msg.innerHTML += '<p> Bom Dia! </p>'
+    if (hour >= 0 && hour < 12) {
+        res.innerHTML += '<p> Good Morning! </p>'
         img.src = 'manha.png'
-        document.body.style.background = '#e2cd9f'
+        body.style.background = '#e2cd9f'
 
-    } else if (hora >= 12 && hora < 18) {
-        msg.innerHTML += '<p> Boa Tarde! </p>'
+    } else if (hour < 18) {
+        res.innerHTML += '<p> Good Afternoon! </p>'
         img.src = 'tarde.png'
-        document.body.style.background = '#B9846F'
+        body.style.background = '#b9846f'
 
     } else {
-        msg.innerHTML += '<p> Boa Noite! </p>' 
+        res.innerHTML += '<p> Good Evening! </p>'
         img.src = 'noite.png'
-        document.body.style.background = '#515154'
-
+        body.style.background = '#515154'
     }
 }

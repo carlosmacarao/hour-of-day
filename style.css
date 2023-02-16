@@ -1,0 +1,34 @@
+body {
+    background-color: #468EEC;
+    color: #fff;
+    font: normal 1em Arial;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background-color: #fff;
+    width: 500px;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.615);
+    font: normal 1em Arial;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+}
